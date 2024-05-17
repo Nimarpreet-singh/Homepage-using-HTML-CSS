@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCM Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5fa; /* Light lavender background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 80px; /* Initial width of sidebar */
+            background-color: #6a1b9a; /* Dark purple background */
+            color: white;
+            padding: 20px;
+            transition: width 0.3s; /* Transition effect for width */
+        }
+
+        .sidebar:hover {
+            width: 200px; /* Width of sidebar on hover */
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px; /* Increase font size of sidebar buttons */
+            display: block; /* Ensure buttons take full width */
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #512da8; /* Darker shade of purple on hover */
+        }
+
+        .container {
+            flex: 1; /* Take remaining space */
+            padding: 20px;
+        }
+
+        h1 {
+            color: #6a1b9a; /* Dark purple text */
+            margin-bottom: 20px;
+            text-align: center; /* Center align text */
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        button {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #8e24aa; /* Purple button */
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #7b1fa2; /* Darker shade of purple on hover */
+            transform: translateY(-2px);
+        }
+
+        .team-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+            text-align: center; /* Center align text */
+            transition: margin-left 0.3s; /* Add transition to team section */
+        }
+
+        .team-member {
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-member h2 {
+            color: #6a1b9a; /* Dark purple text */
+            font-size: 20px;
+            margin: 10px 0 5px;
+        }
+
+        .feedback-section {
+            width: 100%;
+            max-width: 600px;
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .feedback-section h2 {
+            color: #6a1b9a; /* Dark purple text */
+            margin-bottom: 20px;
+        }
+
+        .feedback-section form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feedback-section label {
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .feedback-section input,
+        .feedback-section textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .feedback-section button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #8e24aa; /* Purple button */
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .feedback-section button:hover {
+            background-color: #7b1fa2; /* Darker shade of purple on hover */
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #6a1b9a; /* Dark purple background */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">our Services</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1>Welcome to our SCM Project</h1>
+        <div class="button-container">
+            <button onclick="window.location.href='youtube.html'">Go to YouTube</button>
+            <button onclick="window.location.href='netflix.html'">Go to Netflix</button>
+            <button onclick="window.location.href='spotifyclone.html'">Go to Spotify Clone</button>
+            <button onclick="window.location.href='prime.html'">Go to Prime</button>
+        </div>
+
+        <div class="team-section">
+            <div class="team-member">
+                <img src="https://i.ibb.co/N1pycrJ/091db366-1d3e-4c10-8088-e284f9bbe284.jpg" alt="Kanika">
+                <h2>Kanika</h2>
+            </div>
+            <div class="team-member">
+                <img src="https://i.ibb.co/19pFGKw/d93f6b94-8bac-4056-aa42-5fe9ea635b71.jpg" alt="Nimarpreet Singh">
+                <h2>Nimarpreet Singh</h2>
+            </div>
+            <div class="team-member">
+                <img src="https://i.ibb.co/9ZP7r97/be0abdd0-2d1c-4ba5-83c9-766480764156.jpg" alt="Jaskaran Singh">
+                <h2>Jaskaran Singh</h2>
+            </div>
+            <div class="team-member">
+                <img src="https://i.ibb.co/Wc6NJLc/9fcf2bdb-e89a-4e55-891f-52c9d03b4d20.jpg" alt="Ishita Singla">
+                <h2>Ishita Singla</h2>
+            </div>
+        </div>
+
+        <div class="feedback-section">
+            <h2>Feedback</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <footer>
+            <p>Main link page - Kanika</p>
+            <p>Netflix homepage, Prime home page - Nimarpreet Singh</p>
+            <p>Complete Spotify clone - Jaskaran Singh</p>
+            <p>Youtube clone - Ishita Singla</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+    // JavaScript code
+    const title = document.querySelector('h1');
+
+    // Array of words to animate
+    const words = ["Welcome", "to", "our", "SCM", "Project"];
+
+    // Index to keep track of the current word
+    let index = 0;
+
+    // Function to animate the title
+    function animateTitle() {
+        title.textContent = words[index]; // Set current word
+        index = (index + 1) % words.length; // Increment index, loop back if necessary
+        setTimeout(animateTitle, 1000); // Repeat after 1 second
+    }
+
+    // Start the animation
+    animateTitle();
+</script>
+<script>
+    // JavaScript code
+    const title = document.querySelector('h1');
+
+    // Array of words to animate
+    const words = ["Welcome", "to", "our", "SCM", "Project"];
+
+    // Index to keep track of the current word
+    let index = 0;
+
+    // Function to animate the title
+    function animateTitle() {
+        title.textContent = words[index]; // Set current word
+        index = (index + 1) % words.length; // Increment index, loop back if necessary
+        setTimeout(animateTitle, 1000); // Repeat after 1 second
+    }
+
+    // Start the animation
+    animateTitle();
+</script>
+<script>
+    // JavaScript code
+    let currentIndex = 0; // Current index of the slide
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    // Function to show the next slide
+    function showNextSlide() {
+        slides[currentIndex].style.display = 'none'; // Hide current slide
+        currentIndex = (currentIndex + 1) % totalSlides; // Move to next slide
+        slides[currentIndex].style.display = 'block'; // Show next slide
+    }
+
+    // Set interval to automatically show next slide every 3 seconds
+    setInterval(showNextSlide, 3000);
+</script>
+
+</html>
